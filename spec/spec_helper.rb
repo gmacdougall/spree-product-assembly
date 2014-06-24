@@ -13,6 +13,8 @@ require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
 require 'spree/testing_support/authorization_helpers'
 
+FactoryGirl.find_definitions
+
 RSpec.configure do |config|
   config.color = true
   config.mock_with :rspec
