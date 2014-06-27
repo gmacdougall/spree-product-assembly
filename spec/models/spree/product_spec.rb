@@ -67,4 +67,14 @@ describe Spree::Product do
       @product.count_of(@part2.master).should == 2
     end
   end
+
+  describe '#update_assembly_inventory!' do
+    context 'when the product is an assembly' do
+      it 'sets the inventory level to the minimum part level for each stock location'
+    end
+
+    context 'when the product is not an assembly' do
+      it 'does nothing'
+    end
+  end
 end

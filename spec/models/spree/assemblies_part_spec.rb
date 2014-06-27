@@ -30,5 +30,9 @@ module Spree
         expect(subject).to eq 1
       end
     end
+
+    describe '#count_by_stock_location!' do
+      it 'is lists how many assemblies can be supplied with this part per stock location'
+    end
   end
 end

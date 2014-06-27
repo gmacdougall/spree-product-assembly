@@ -53,6 +53,12 @@ Spree::Product.class_eval do
     errors.add(:can_be_part, Spree.t(:assembly_cannot_be_part)) if can_be_part
   end
 
+  def update_assembly_inventory!
+    assemblies_parts.map(&:count_by_stock_location)
+    require 'pry'
+    binding.pry
+  end
+
   private
   def assemblies_part(variant)
     Spree::AssembliesPart.get(self.id, variant.id)
